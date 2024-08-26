@@ -1,0 +1,13 @@
+body {
+    background-color: chocolate;
+}
+
+button {
+    font-style:inherit;
+    background-color: blue;
+    color: bisque;
+}
+
+h1 {
+    color: chartreuse;
+}
