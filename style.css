@@ -8,6 +8,13 @@ button {
     color: bisque;
 }
 
-h1 {
-    color: chartreuse;
+/* h1 {
+    color: rgb(10, 148, 106);
+} */
+ 
+/* Trough id  */
+
+#Heading1 {
+    
+   color: rgb(15, 114, 84); 
 }
