@@ -1,11 +1,16 @@
 body {
-    background-color: chocolate;
+    background-image: url('image/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    margin: 0; 
+    height: 100vh;
 }
 
 button {
     font-style:inherit;
-    background-color: blue;
-    color: bisque;
+    background-color: rgb(91, 255, 219);
+    color: rgb(66, 39, 5);
 }
 
 /* h1 {
@@ -16,7 +21,7 @@ button {
 
 #Heading1 {
     
-   color: rgb(15, 114, 84); 
+   color: rgb(255, 255, 255); 
 }
 
 /* Through class */
@@ -26,5 +31,5 @@ button {
  } */
  #Heading2 {
     
-    color: rgb(15, 114, 84); 
+    color: rgb(94, 201, 169); 
  }
