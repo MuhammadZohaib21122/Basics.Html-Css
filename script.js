@@ -18,7 +18,7 @@ display.value ="";
 }
 
 function calculate() {
-    const input = display.value;  // Get the current value from the display
+    const input = display.value; 
     let operator;
     let operands;
 
