@@ -1,12 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap');
-html, body {
-  height: 100%;
-  width: 100%;
-  font-family: 'Roboto', sans-serif; 
-  background-color: black;
+body {
+  margin: 0;
+  display: flex;
+  max-width: 600px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(59, 57, 57);
 }
 
-.button{
+#calculator {
+
+  font-family: Arial, sans-serif;
+  background-color: rgb(58, 55, 55);
+  border-radius: 15px;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4 ,1fr);
+  gap: 10px;
+  padding: 25px;
+}
+
+button {
   width: 66px;
   padding: 20px;
   margin: 0 3px;
@@ -20,28 +39,32 @@ html, body {
   
 }
 
-.row{
-  margin: 6px 0;
-}
-.row input{
-  width: 291px;
+ input{
+  width: 320px;
   font-size: 20px;
-    margin: 0 3px;
+  margin-left: 25px;
     padding: 10px 0px;
     border: 2px solid black;
     border-radius: 9px;
     font-style: bold;
     background-color: rgb(131, 124, 131);
+    color: aliceblue;
 }
-#button {
+#abc {
   width: 300px;
   padding: 20px;
-  margin: 0 3px;
+  margin-top:0 0px;
+  margin-left: 30px;
   color: antiquewhite;
   background-color:rgb(250, 73, 4);
   border: 2px solid black;
   border-radius: 9px;
-  cursor: pointer;
-  text-size-adjust: 54sp;
-  font-size: medium;
+  font-size: large;
+}
+.calculation {
+  background-color:rgb(185, 127, 1);
+}
+
+#equal {
+  background-color:rgb(18, 221, 45);
 }
