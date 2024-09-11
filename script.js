@@ -37,10 +37,7 @@ function calculate() {
               if (!isNaN(a) && !isNaN(b)) {
             const result = operators[operator](a, b);
             display.value = result;
-        } else {
-            display.value = "Error";
+        }else{
+            display.value ="Error";
         }
-    } else {
-        display.value = "Error";
-    }
-}
+    }}
