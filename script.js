@@ -10,7 +10,6 @@ const operators = {
 
 
 function appendToDisplay(input) {
-    
     display.value += input;
 }
 
