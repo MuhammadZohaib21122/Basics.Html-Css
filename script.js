@@ -11,6 +11,7 @@ const operators = {
 
 function appendToDisplay(input) {
     display.value += input;
+
 }
 
 function cleardisplay(){
@@ -34,10 +35,13 @@ function calculate() {
         const a = parseFloat(operands[0]); 
         const b = parseFloat(operands[1]);  
 
-              if (!isNaN(a) && !isNaN(b)) {
+        if (!isNaN(a) && !isNaN(b)) {
             const result = operators[operator](a, b);
             display.value = result;
         }else{
             display.value ="Error";
         }
-    }}
+    }else{
+        display.value ="Error";
+    }
+}
