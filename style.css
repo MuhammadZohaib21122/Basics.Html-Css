@@ -47,6 +47,7 @@ button {
     border: 2px solid black;
     border-radius: 9px;
     font-style: bold;
+    text-align: center;
     background-color: rgb(131, 124, 131);
     color: aliceblue;
 }
