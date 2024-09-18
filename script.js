@@ -1,13 +1,12 @@
 const display = document.getElementById("display");
 
 
-const operators = {
+const operators = {            // mathematical operator operation on two numbers
     '+': (a, b) => a + b,
     '-': (a, b) => a - b,
     '*': (a, b) => a * b,
     '/': (a, b) => a / b
 };
-
 
 function appendToDisplay(input) {
     display.value += input;
@@ -18,8 +17,8 @@ function cleardisplay(){
 display.value ="";
 }
 
-function calculate() {
-    const input = display.value; 
+function calculate() { 16*16
+    const input = display.value; //
     let operator;
     let operands;
 
