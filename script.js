@@ -10,7 +10,7 @@ const operators = {            // mathematical operator operation on two numbers
 
 function appendToDisplay(input) {        //add numbers or operators to the display.
     display.value += input;
-
+    
 }
 
 function cleardisplay(){  // they can empty the input value
