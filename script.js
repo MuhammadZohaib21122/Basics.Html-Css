@@ -8,17 +8,36 @@ const operators = {            // mathematical operator operation on two numbers
     '/': (a, b) => a / b
 };
 
+
 function appendToDisplay(input) {        //add numbers or operators to the display.
-    display.value += input;
+    const lastChar = input[input.length - 1]; 
+    console.log("Last input character:", lastChar);
     
+    if (lastChar == "+" || lastChar == "-" || lastChar == "*" || lastChar == "/" || lastChar == "." ) {
+
+        display.value = display.value.slice(0, -1);
+    }if (lastChar == "") {
+        
+    }
+    
+    display.value += input;
 }
+
+
+
 
 function cleardisplay(){  // they can empty the input value
-display.value ="";
+display.value = "";
 }
 
-function calculate() { 16*16
-    const input = display.value;          // they gain value to  variable input
+
+
+
+function calculate() { 
+    const input = display.value.trim();          // they gain value to  variable input
+
+   
+    
     let operator;
     let operands;                     // Two variables, operator and operands, are declared
 
@@ -31,12 +50,13 @@ function calculate() { 16*16
     }
 
     if (operands && operands.length === 2) {   // they are check if they are two element ,they perform calculate
-        const a = parseFloat(operands[0]); 
-        const b = parseFloat(operands[1]);  // These lines converting the two operands from strings to  numbers
+        const a = parseFloat(operands[0].trim()); 
+        const b = parseFloat(operands[1].trim());  // These lines converting the two operands from strings to  numbers
 
         if (!isNaN(a) && !isNaN(b)) {            //This checks if both a and b are valid numbers
             const result = operators[operator](a, b); //the result is stored in the variable result.
             display.value = result; //The result of the calculation is displayed in the display element.
+           
         }else{
             display.value ="Error"; //If two or one, a or b is not a valid number, the display is set to "Error"
         }
