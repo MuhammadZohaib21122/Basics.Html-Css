@@ -10,34 +10,31 @@ const operators = {            // mathematical operator operation on two numbers
 
 
 function appendToDisplay(input) {        //add numbers or operators to the display.
-    const lastChar = input[input.length - 1]; 
-    console.log("Last input character:", lastChar);
-    
-    if (lastChar == "+" || lastChar == "-" || lastChar == "*" || lastChar == "/" || lastChar == "." ) {
+
+    const secondLastChar = display.value.charAt(display.value.length - 1);
+        
+    console.error(typeof(lastChar));
+    if ((secondLastChar === '+' || secondLastChar === '-' || secondLastChar === '*' || secondLastChar === '/' || secondLastChar === '.' ) && (input === '+' || input === '-' || input === '*' || input === '/' || input === '.' )) {
 
         display.value = display.value.slice(0, -1);
-    }if (lastChar == "") {
+        display.value += input;
         
     }
+    else
+    {
+        display.value += input;
+    }
     
-    display.value += input;
 }
-
-
 
 
 function cleardisplay(){  // they can empty the input value
 display.value = "";
 }
 
-
-
-
 function calculate() { 
-    const input = display.value.trim();          // they gain value to  variable input
 
-   
-    
+    const input = display.value.trim();          // they gain value to  variable input
     let operator;
     let operands;                     // Two variables, operator and operands, are declared
 
@@ -63,4 +60,5 @@ function calculate() {
     }else{
         display.value ="Error";
     }
+    
 }
