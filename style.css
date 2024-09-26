@@ -1,21 +1,21 @@
 body {
+  background-image: url('calculator_backgroung.jpg');
   margin: 0;
   display: flex;
   max-width: 600px;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgb(59, 57, 57);
+  /* background-color: rgb(59, 57, 57); */
 }
 
 #calculator {
-
   font-family: Arial, sans-serif;
   background-color: rgb(58, 55, 55);
   border-radius: 15px;
   max-width: 500px;
   overflow: hidden;
-  
+  text-align: center;
 }
 
 
