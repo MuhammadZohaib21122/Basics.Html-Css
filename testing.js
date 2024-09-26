@@ -1,7 +1,3 @@
-// let lastString = result.substr(result.length - 1);
-// console.log (lastString);
-
-
 const display = document.getElementById("display");
 
 
@@ -12,36 +8,33 @@ const operators = {            // mathematical operator operation on two numbers
     '/': (a, b) => a / b
 };
 
-const operatorSign = {
-    'add': '+',
-    'subtract': '-',
-    'multiply': '*',
-    'divide': '/'
-};
 
 function appendToDisplay(input) {        //add numbers or operators to the display.
-    display.value += input;
+
+    const secondLastChar = display.value.charAt(display.value.length - 1);
+        
+    console.error(typeof(lastChar));
+    if ((secondLastChar === '+' || secondLastChar === '-' || secondLastChar === '*' || secondLastChar === '/' || secondLastChar === '.' ) && (input === '+' || input === '-' || input === '*' || input === '/' || input === '.' )) {
+
+        display.value = display.value.slice(0, -1);
+        display.value += input;
+        
+    }
+    else
+    {
+        display.value += input;
+    }
     
 }
 
-function replaceoperator(input) {
-    const replacement = {
-        '+':'add',
-        '-':'subtract',
-        '*':'multiply',
-        '/':'divide',
-    }
-}
 
 function cleardisplay(){  // they can empty the input value
-display.value ="";
+display.value = "";
 }
 
-
-
-
 function calculate() { 
-    const input = display.value;          // they gain value to  variable input
+
+    const input = display.value.trim();          // they gain value to  variable input
     let operator;
     let operands;                     // Two variables, operator and operands, are declared
 
@@ -54,8 +47,8 @@ function calculate() {
     }
 
     if (operands && operands.length === 2) {   // they are check if they are two element ,they perform calculate
-        const a = parseFloat(operands[0]); 
-        const b = parseFloat(operands[1]);  // These lines converting the two operands from strings to  numbers
+        const a = parseFloat(operands[0].trim()); 
+        const b = parseFloat(operands[1].trim());  // These lines converting the two operands from strings to  numbers
 
         if (!isNaN(a) && !isNaN(b)) {            //This checks if both a and b are valid numbers
             const result = operators[operator](a, b); //the result is stored in the variable result.
@@ -67,4 +60,5 @@ function calculate() {
     }else{
         display.value ="Error";
     }
+    
 }
